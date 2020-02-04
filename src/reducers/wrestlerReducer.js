@@ -6,8 +6,7 @@ const forTesting = [
 const wrestlerReducer = (state = forTesting, { type, payload }) => {
   switch (type) {
     case "GET_WRESTLERS":
-            console.log("hey");
-
+      console.log("hey");
       return payload;
     default:
       return state;

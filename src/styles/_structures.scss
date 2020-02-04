@@ -1,0 +1,19 @@
+@import 'flexbox';
+
+@mixin flex-row($struct) {
+    @include flexbox;
+    @if ($struct == 'center-h-v') {
+        @include justify-content(center);
+        @include align-items(center);
+    }
+    @if ($struct == 'center-h') {
+        @include justify-content(center);
+    }
+    @if ($struct == 'center-v') {
+        @include align-items(center);
+    }
+}
+
+.container {
+    margin: 0 40px;
+}

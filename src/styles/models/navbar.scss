@@ -1,0 +1,27 @@
+.navbar {
+  a {
+    color: $black;
+  }
+  .navbar__hamburger {
+    display: none;
+  }
+  .navbar__container {
+    display: grid;
+    grid-template-columns: 45% 51% 5%;
+    align-items: center;
+    @include medium("down") {
+      grid-template-columns: 45% 49% 5%;
+    }
+    @include small("down") {
+      display: flex;
+      justify-content: space-between;
+      .navbar__hamburger {
+        display: block;
+      }
+      .navbar__links,
+      .navbar__ctas {
+        display: none;
+      }
+    }
+  }
+}
