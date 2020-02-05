@@ -1,0 +1,62 @@
+.wrestler-list__card {
+  background-color: white;
+  border-radius: 3px;
+  padding: 7px 6px 15px 6px;
+  border: 1px solid gray;
+  display: grid;
+  grid-template-columns: 40% 59%;
+//   height: 111px;
+  font-size: 16px;
+  cursor: pointer;
+  color: $black;
+  @include small("down") {
+      display: flex;
+      flex-wrap: wrap;
+  }
+  &:hover {
+      background-color:rgb(236, 236, 236);
+  }
+  a {
+    color: $primary;
+    &:hover {
+        color: lighten($primary, 8%);
+    }
+  }
+}
+
+.wrestler-list__avatar {
+    @include small("down") {
+        width: 100%;
+        text-align: center;
+    }
+  img {
+    width: 119px;
+  }
+}
+
+.wrestler-list__meta {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  width: 80%;
+  flex-wrap: wrap;
+  @include small("down") {
+      justify-content: center;
+      width: 100%;
+  }
+}
+
+.wrestler-list__info {
+    color: $secondary;
+  p {
+    margin: 4px 0;
+  }
+  align-self: flex-end;
+}
+
+.wrestler-list__description {
+  align-self: center;
+  @include small("down") {
+      padding: 0 15px;
+  }
+}
