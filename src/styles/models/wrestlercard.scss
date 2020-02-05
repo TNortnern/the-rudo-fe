@@ -40,6 +40,9 @@
   justify-content: space-between;
   width: 80%;
   flex-wrap: wrap;
+  @include large("down") {
+      width: 90%;
+  }
   @include small("down") {
       justify-content: center;
       width: 100%;
@@ -48,6 +51,9 @@
 
 .wrestler-list__info {
     color: $secondary;
+    @include large("down") {
+        align-self: center;
+    }
   p {
     margin: 4px 0;
   }
