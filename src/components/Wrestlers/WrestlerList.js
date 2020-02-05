@@ -17,22 +17,30 @@ const WrestlerList = ({ wrestlers }) => {
         <Container>
           <Box>
               <div className="wrestler-list__search">
-                  <input type="text" className="default-input" />
+                  <input placeholder="Search..." type="text" className="default-input" />
               </div>
             <div className="wrestler-list__list">
               {wrestlers ? (
                 wrestlers
                   .filter(wrestler => wrestler.active === 1)
                   .map(wrestler => (
-                    <WrestlerCard wrestler={wrestler} />
+                    <WrestlerCard key={wrestler.uuid} wrestler={wrestler} />
                   ))
               ) : (
+                  <>
                 <Skeleton
                   animation="wave"
                   variant="rect"
                   width={"100%"}
                   height={150}
                 />
+                <Skeleton
+                  animation="wave"
+                  variant="rect"
+                  width={"100%"}
+                  height={150}
+                />
+                </>
               )}
             </div>
           </Box>

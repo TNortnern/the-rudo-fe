@@ -22,7 +22,7 @@ let store = createStore(allReducers, enhancers);
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter basename={"app"}>
+    <BrowserRouter basename={""}>
       <App />
     </BrowserRouter>
   </Provider>,
